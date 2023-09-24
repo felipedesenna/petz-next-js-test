@@ -1,0 +1,23 @@
+.content {
+  max-width: 408px;
+  margin: 34px auto 72px;
+}
+
+.content .title {
+  color: var(--text-primary);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.content .text {
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.content .text span {
+  font-size: 16px;
+  line-height: 140%;
+}
