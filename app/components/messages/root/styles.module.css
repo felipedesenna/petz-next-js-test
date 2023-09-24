@@ -1,0 +1,14 @@
+.root {
+  width: 408px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+  border: 1px solid var(--background-message);
+  background: rgba(223, 134, 134, 0.04);
+}
