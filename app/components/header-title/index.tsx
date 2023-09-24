@@ -1,8 +1,8 @@
 import styles from '@/components/header-title/styles.module.css'
 
 type HeaderTitleProps = {
-  title: string;
-  subtitle: string;
+  title: string
+  subtitle: string
 }
 
 export function HeaderTitle({ title, subtitle }: HeaderTitleProps) {
