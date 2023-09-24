@@ -1,6 +1,14 @@
+import { Metadata } from 'next'
+
 import { HeaderTitle } from '@/components/header-title'
 
 import styles from '@/quem-somos/styles.module.css'
+
+export const metadata: Metadata = {
+  title: 'Quem Somos - Petz nextJS (test)',
+  description: 'A maior rede de tratamento pokémon',
+  keywords: 'Maior rede de tratamento Pokémon, Rede de tratamento Pokémon, Pokémon Center, Tratamento de Pokémon, Serviços de tratamento Pokémon, Cuidados com Pokémon, Pokébola, Treinadores de Pokémon, Pokémon saudáveis, Clínica Pokémon, Recuperação de Pokémon, Bem-estar Pokémon, Centros Pokémon, Melhores cuidados para Pokémon, Consulta de Pokémon',
+}
 
 export default function WhoWeAre() {
   return (
