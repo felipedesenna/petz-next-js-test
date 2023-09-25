@@ -1,0 +1,21 @@
+.container {
+  width: 100%;
+  max-width: 548px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 77px;
+  margin-bottom: 32px;
+}
+
+.container .title {
+  color: var(--title-message);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.container .description {
+  color: var(--text-message);
+  font-size: 12px;
+  font-weight: 500;
+}
