@@ -9,7 +9,9 @@ export function ErrorInfo({ message, onNewAppointment }: InformationProps) {
       <Messages.Title title="Houve um problema no agendamento" />
       <Messages.Image image={WarningIcon} description="Imagem atenção" />
       <Messages.Content text={message} />
-      <Messages.Button onClick={onNewAppointment} text="Fazer Novo Agendamento" />
+      <Messages.Button onClick={onNewAppointment}>
+        Fazer Novo Agendamento
+      </Messages.Button>
     </Messages.Root>
   )
 }
