@@ -1,7 +1,16 @@
 .content {
+  max-width: 1440px;
   min-height: 440px;
-  margin: 0 auto;
+  margin: 32px auto 72px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  flex-direction: column;
+}
+
+.content .title_form {
+  margin-bottom: 32px;
+  
+  color: var(--title-message);
+  font-size: 24px;
+  font-weight: 600;
 }
