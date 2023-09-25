@@ -1,0 +1,49 @@
+.button {
+  border-radius: 30px;
+  border: 0;
+  padding: 12px;
+
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+}
+
+.primary {
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
+.primary:hover {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+.secondary {
+  background-color: var(--secondary);
+  border: 1px solid var(--title-message);
+  color: var(--title-message);
+}
+
+.secondary:hover {
+  background-color: var(--title-message);
+  color: var(--secondary);
+}
+
+.icon {
+  margin-left: 10px;
+  color: var(--title-message);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.primary:hover .icon {
+  color: var(--primary);
+}
+
+.secondary:hover .icon {
+  color: var(--secondary);
+}
