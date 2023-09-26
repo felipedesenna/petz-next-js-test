@@ -64,7 +64,13 @@ export function CreatePokemon({ onPokemonValue }: CreatePokemonProps) {
       </div>
 
       <div>
-        <Button disabled={isLimitPokemon} onClick={handleNewPokemon} variant="secondary" icon={'+'}>
+        <Button
+          disabled={isLimitPokemon}
+          onClick={handleNewPokemon}
+          variant="secondary"
+          type="button"
+          icon={'+'}
+        >
           Adicionar novo pokémon ao time...
         </Button>
       </div>
