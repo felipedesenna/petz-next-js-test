@@ -1,8 +1,6 @@
 import { Metadata } from 'next'
 
 import { HeaderTitle } from '@/components/header-title'
-import { ErrorInfo } from '@/components/error-info'
-import { SuccessInfo } from '@/components/success-info'
 import { Form } from '@/components/form'
 
 import styles from '@/agendar-consulta/styles.module.css'
@@ -24,8 +22,6 @@ export default function ScheduleAppointment() {
       <div className={styles.content}>
         <h3 className={styles.title_form}>Preencha o formulário abaixo para agendar sua consulta</h3>
         <Form />
-        <SuccessInfo message="Seu agendamento para dia xx/xx/xxxx, às 00h00m, para 0x pokémons foi realizado com sucesso!" />
-        <ErrorInfo message="{mensagem de erro}" />
       </div>
     </>
   )
