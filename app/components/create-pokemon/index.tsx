@@ -1,9 +1,10 @@
-'use client'
+import { ChangeEvent, useEffect, useState } from 'react'
 
-import { useEffect, useState } from 'react'
-
-import { Select } from 'app/components/form/select'
-import { Button } from 'app/components/form/button'
+import { Select } from '@/components/form/select'
+import { getPokemon } from '@/api/http'
+import { Result } from '@/interfaces/api'
+import { mapperSelect } from '@/utils/mapperSelect'
+import { Button } from '@/components/form/button'
 
 import styles from '@/components/create-pokemon/styles.module.css'
 
@@ -11,18 +12,25 @@ type NewPokemon = {
   id: number
 }
 
-const pokemonList = [
-  { id: '1', value: 'pokemon 1' },
-  { id: '2', value: 'pokemon 2' },
-  { id: '3', value: 'pokemon 3' },
-  { id: '4', value: 'pokemon 4' },
-]
+type CreatePokemonProps = {
+  onPokemonValue: (value: ChangeEvent<HTMLSelectElement>) => void
+}
 
-export function CreatePokemon() {
+export function CreatePokemon({ onPokemonValue }: CreatePokemonProps) {
   const [isLimitPokemon, setIsLimitPokemon] = useState(false)
+  const [pokemonData, setPokemonData] = useState<Result[]>([])
   const [newPokemon, setNewPokemon] = useState<NewPokemon[]>([
     { id: 1 }
   ])
+
+  async function loadPokemon() {
+    const { results } = await getPokemon()
+    setPokemonData(results)
+  }
+
+  useEffect(() => {
+    loadPokemon()
+  }, [])
 
   function handleNewPokemon() {
     const lastPokemon = newPokemon[newPokemon.length - 1]
@@ -35,6 +43,8 @@ export function CreatePokemon() {
     }
   }, [newPokemon])
 
+  const pokemonList = mapperSelect(pokemonData)
+
   return (
     <div className={styles.container}>
       <p className={styles.title}>Cadastre seu time</p>
@@ -44,10 +54,11 @@ export function CreatePokemon() {
         {newPokemon.map(item => (
           <Select
             key={item.id}
-            id="create_pokemon"
+            id={`create_pokemon_${item.id}`}
             text={`Pokémon 0${item.id}`}
             defaultText="Selecione seu pokémon"
             options={pokemonList}
+            onSelected={onPokemonValue}
           />
         ))}
       </div>
