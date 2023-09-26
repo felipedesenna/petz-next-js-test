@@ -2,7 +2,7 @@ import { ChangeEvent, useEffect, useState } from 'react'
 
 import { Select } from '@/components/form/select'
 import { getPokemonCity } from '@/api/http'
-import { RegionResult } from '@/interfaces/api'
+import { Result } from '@/interfaces/api'
 import { mapperSelect } from '@/utils/mapperSelect'
 
 type CitySelectProps = {
@@ -11,7 +11,7 @@ type CitySelectProps = {
 }
 
 export function CitySelect({ onCityValue, regionId }: CitySelectProps) {
-  const [cityData, setCityData] = useState<RegionResult[]>([])
+  const [cityData, setCityData] = useState<Result[]>([])
 
   async function loadAppointmentCity(region: string) {
     const valueLowerCase = region.toLocaleLowerCase()

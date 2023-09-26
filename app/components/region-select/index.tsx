@@ -2,7 +2,7 @@ import { ChangeEvent, useEffect, useState } from 'react'
 
 import { Select } from '@/components/form/select'
 import { getPokemonRegion } from '@/api/http'
-import { RegionResult } from '@/interfaces/api'
+import { Result } from '@/interfaces/api'
 import { mapperSelect } from '@/utils/mapperSelect'
 
 type RegionSelectProps = {
@@ -10,7 +10,7 @@ type RegionSelectProps = {
 }
 
 export function RegionSelect({ onRegionValue }: RegionSelectProps) {
-  const [regionData, setRegionData] = useState<RegionResult[]>([])
+  const [regionData, setRegionData] = useState<Result[]>([])
 
   async function loadAppointmentRegion() {
     const { results } = await getPokemonRegion()
