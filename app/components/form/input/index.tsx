@@ -11,7 +11,7 @@ export function Input({ id, text, type = 'text', onChangeValue, ...rest }: Input
   return (
     <div className="container_input_select">
       <label htmlFor={id}>{text}</label>
-      <input id={id} name={id} type={type} ref={onChangeValue} {...rest} />
+      <input data-testid="input" id={id} name={id} type={type} ref={onChangeValue} {...rest} />
     </div>
   )
 }

@@ -32,7 +32,7 @@ export function Select({
       >
         <option value="0" disabled>{defaultText}</option>
         {options.map(item => (
-          <option key={item.id} value={item.value}>{item.value}</option>
+          <option data-testid={`options-${item.id}`} key={item.id} value={item.value}>{item.value}</option>
         ))}
       </select>
     </div>
