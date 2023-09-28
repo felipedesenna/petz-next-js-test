@@ -113,7 +113,7 @@ export function Form() {
       )}
 
       {statusMessage.status === 'wanting' && (
-        <form className={styles.container} onSubmit={handleSubmit}>
+        <form data-testid="form" className={styles.container} onSubmit={handleSubmit}>
           <div className={styles.content}>
             <Input
               id="name"
