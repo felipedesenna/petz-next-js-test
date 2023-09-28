@@ -21,7 +21,7 @@ export default function ScheduleAppointment() {
 
       <div className={styles.content}>
         <h3 className={styles.title_form}>Preencha o formulário abaixo para agendar sua consulta</h3>
-        <Form data-testid="form" />
+        <Form />
       </div>
     </>
   )
