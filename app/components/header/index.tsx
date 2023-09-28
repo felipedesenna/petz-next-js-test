@@ -10,7 +10,7 @@ export function Header() {
     <header className={styles.header}>
       <div className={styles.content}>
         <div className={styles.logo}>
-          <Image src={Logo} alt="Centro Pokémon" />
+          <Image src={Logo} alt="Centro Pokémon" data-testid="logo" />
           Centro Pokémon
         </div>
 

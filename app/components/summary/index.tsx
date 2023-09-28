@@ -15,11 +15,11 @@ export function Summary({ quantity, unitaryValue, fee }: SummaryProps) {
     <section className={styles.summary}>
       <div>
         <p>Número de pokémons a serem atendidos:</p>
-        <span>{quantity ? `0${quantity}` : 0}</span>
+        <span data-testid="quantity">{quantity !== 0 ? `0${quantity}` : 0}</span>
       </div>
       <div>
         <p>Atendimento unitário por pokémon:</p>
-        <span>{convertCurrency(unitaryValue)}</span>
+        <span data-testid="unitary-value">{convertCurrency(unitaryValue)}</span>
       </div>
       <div>
         <p>Subtotal:</p>
@@ -27,7 +27,7 @@ export function Summary({ quantity, unitaryValue, fee }: SummaryProps) {
       </div>
       <div>
         <p>Taxa geracional*:</p>
-        <span>{convertCurrency(fee)}</span>
+        <span data-testid="fee">{convertCurrency(fee)}</span>
       </div>
       <code className={styles.comments}>*adicionamos uma taxa de 3%, multiplicado pelo número da geração mais alta do time, com limite de até 30%</code>
     </section>
