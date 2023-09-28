@@ -12,10 +12,10 @@ export function HeaderTitle({ title, subtitle }: HeaderTitleProps) {
         <ul className={styles.breadcrumb}>
           <li>Home</li>
           <li className={styles.special}>{'>'}</li>
-          <li className={styles.gray}>{title}</li>
+          <li data-testid="breadcrumb" className={styles.gray}>{title}</li>
         </ul>
 
-        <h1 className={styles.title}>{title}</h1>
+        <h1 data-testid="title" className={styles.title}>{title}</h1>
 
         <h2 className={styles.subtitle}>{subtitle}</h2>
       </div>
