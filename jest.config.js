@@ -1,15 +1,22 @@
-const nextJest = require('next/jest')
+const nextJest = require("next/jest")
 
-const createJestConfig = nextJest({ dir: './' })
+const createJestConfig = nextJest({ dir: "./" })
 
 const customJestConfig = {
-  modulePaths: ['<rootDir>/app/'],
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  testEnvironment: 'jest-environment-jsdom',
-  testPathIgnorePatterns: ['/node_modules/', '/.next/'],
+  testPathIgnorePatterns: ["/node_modules/", "/.next/"],
+  transform: {
+    "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest"
+  },
+  modulePaths: [
+    "<rootDir>/app/"
+  ],
+  setupFilesAfterEnv: [
+    "<rootDir>/jest.setup.js"
+  ],
+  testEnvironment: "jsdom",
   collectCoverage: true,
   collectCoverageFrom: [
-    'app/**/*.ts(x)?'
+    "app/**/*.ts(x)?"
   ],
 }
 
