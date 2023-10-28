@@ -15,8 +15,8 @@ export function Header() {
         </div>
 
         <nav className={styles.menu}>
-          <li><Link href="/quem-somos" title="Quem Somos">Quem Somos</Link></li>
-          <li><Link className={styles.active} href="/agendar-consulta" title="Agendar Consulta">Agendar Consulta</Link></li>
+          <li><Link href="/who-we-are" title="Quem Somos">Quem Somos</Link></li>
+          <li><Link className={styles.active} href="/schedule-appointment" title="Agendar Consulta">Agendar Consulta</Link></li>
         </nav>
       </div>
     </header>
