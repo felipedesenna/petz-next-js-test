@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 import { HeaderTitle } from '@/components/header-title'
 
-import styles from '@/quem-somos/styles.module.css'
+import styles from '@/who-we-are/styles.module.css'
 
 export const metadata: Metadata = {
   title: 'Quem Somos - Petz nextJS (test)',

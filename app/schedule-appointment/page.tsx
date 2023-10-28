@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import { HeaderTitle } from '@/components/header-title'
 import { Form } from '@/components/form'
 
-import styles from '@/agendar-consulta/styles.module.css'
+import styles from '@/schedule-appointment/styles.module.css'
 
 export const metadata: Metadata = {
   title: 'Agendar Consulta - Petz nextJS (test)',
