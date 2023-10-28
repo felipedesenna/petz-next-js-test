@@ -1,6 +1,6 @@
 import '@/styles/globals.css'
-import { Metadata } from 'next'
-import { Inter } from '@next/font/google'
+import type { Metadata, Viewport } from 'next'
+import { Inter } from 'next/font/google'
 import { ReactNode } from 'react'
 
 import { Header } from '@/components/header'
@@ -11,10 +11,15 @@ type RootLayoutProps = {
 }
 
 export const metadata: Metadata = {
-  title: 'Petz nextJS (test)',
+  title: 'Petz nextJS',
   description: 'Centro Pokémon de atendimento ao seu animalzinho!',
-  viewport: 'width=device-width, initial-scale=1',
   icons: { icon: '/favicon.ico' },
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
 }
 
 const inter = Inter({ subsets: ['latin'] })
